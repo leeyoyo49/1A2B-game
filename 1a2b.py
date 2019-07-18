@@ -1,39 +1,33 @@
 import random
 ans = []
 while len(ans) != 4:
-    x = random.randint(1, 9)
+    x = random.randint(0, 9)
     if int(x) not in ans:
         ans.append(x)
 print(ans)
-
-a = 0
-b = 0
-while a < 4:
-    gus = input("incert:")
+p=0
+def yee(y):
+    if alist[y] in ans:
+        if ans[y] == alist[y]:
+            return 1
+        else:
+            return 2
+alot=0
+blot=0
+while alot < 4:
+    gus = input("insert:")
     alist = [int(x) for x in gus]
-    a = 0
-    b = 0
-    if alist[0] in ans:
-        if ans[0] == alist[0]:
-            a += 1
+    alot = 0
+    blot = 0
+    y = 0
+    while y<4:
+        if yee(y) == 1:
+            alot+=1
+        elif yee(y) == 2:
+            blot+=1     
         else:
-            b += 1
-    if alist[1] in ans:
-        if ans[1] == alist[1]:
-            a += 1
-        else:
-            b += 1
-    if alist[2] in ans:
-        if ans[2] == alist[2]:
-            a += 1
-        else:
-            b += 1
-    if alist[3] in ans:
-        if ans[3] == alist[3]:
-            a += 1
-        else:
-            b += 1
-    print(a, "A", b, "B")
+            p=1
+        y+=1
+    print(alot, "A", blot, "B")
 
 
-print("4A0B")
