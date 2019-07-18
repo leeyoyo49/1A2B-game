@@ -1,13 +1,10 @@
 import random
-(w1)=int(random.uniform(1,10))
-(w2)=int(random.uniform(1,10))
-(w3)=int(random.uniform(1,10))
-(w4)=int(random.uniform(1,10))
-
-ans=[w1,w2,w3,w4]
+ans=[]
+while len(ans)!=4:
+    x=random.randint(1,9)
+    if int(x) not in ans:
+        ans.append(x)
 print(ans)
-g1=g2=g3=g4=0
-
 
 a=0
 b=0
