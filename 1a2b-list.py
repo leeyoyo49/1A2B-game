@@ -1,8 +1,7 @@
 import random
-ans = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-random.shuffle(ans)
-del ans[4:10]
-print(ans)
+d = dict.fromkeys(range(10))
+ans = random.sample(list(d), 4)
+print(d)
 count_of_a = count_of_b = 0
 
 
