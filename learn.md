@@ -8,7 +8,7 @@
    4. random.random()       產生 0 到 1 之间的随机**float**  
    5. random.randrange(1,100,2) 1到100的间隔为2的随机 **int** == 產生奇數  
    6. 點擊ㄅ==>[random的網址](http://www.runoob.com/python/func-number-random.html)  
-   7. **神奇的刪除線**
+   7. ~~**神奇的刪除線**~~
 ***   
 2.list和dict的部分  
    * dict(zip(list1,list2)) 把l1,l2塞成一個字典  
