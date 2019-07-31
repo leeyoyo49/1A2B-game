@@ -15,9 +15,9 @@ def compare(ans, guslist):
                 count_of_b += 1
     return count_of_a, count_of_b
 
-<<<<<<< HEAD
-guslist=[]
-player_give_ab=""
+
+guslist = []
+player_give_ab = ""
 # 資料庫(一行就能解決的事我寫了10行)
 allthenumlist = []
 for y in range(123, 9877):
@@ -33,7 +33,7 @@ the_history_box = {}
 while count_of_a < 4 and player_give_a < 4:
     a = 0
     gus = input("insert your guess:")
-    #處理輸入錯誤
+    # 處理輸入錯誤
     while a < 2:
         try:
             guslist = [int(x) for x in gus]
@@ -63,8 +63,8 @@ while count_of_a < 4 and player_give_a < 4:
             player_give_ab = input("show me the result(?a?b):")
             player_give_a = int(player_give_ab[0])
             player_give_b = int(player_give_ab[2])
-            if len(player_give_ab)>4:
-                a=1
+            if len(player_give_ab) > 4:
+                a = 1
             else:
                 print("show me the right answer!!")
                 a = 2
@@ -86,14 +86,14 @@ while count_of_a < 4 and player_give_a < 4:
             notallthenumlist.append(y)
             allthenumlist = []
             allthenumlist = notallthenumlist
-    #電腦BM
+    # 電腦BM
     if len(notallthenumlist) == 1:
         print("I'm gonna win at the next step haha")
-    #玩家作弊
+    # 玩家作弊
     if len(notallthenumlist) == 0:
         print("you cheated!!")
         break
-    #顯示出有神馬可能性
+    # 顯示出有神馬可能性
     print(the_history_box, "there are", len(notallthenumlist),
           "possibilities"+'\n'+"==================================================")
 
@@ -102,11 +102,3 @@ if player_give_a == 4:
     print("haha I win loser")
 if count_of_a == 4:
     print("it must be a mistake that i lost")
-=======
-
-while count_of_a < 4:
-    gus = input("insert:")
-    guslist = [int(x) for x in gus]
-    count_of_a, count_of_b = compare(ans, guslist)
-    print(count_of_a, "A", count_of_b, "B")
->>>>>>> parent of 2f6cfc4... the computer can play 1A2B with you, and this is the 1st version
