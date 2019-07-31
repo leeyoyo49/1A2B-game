@@ -1,10 +1,10 @@
 import random
 d = dict.fromkeys(range(10))
 ans = random.sample(list(d), 4)
-print(ans)
+print(d)
 count_of_a = count_of_b = 0
 
-#比較的function
+
 def compare(ans, guslist):
     count_of_a = count_of_b = 0
     for y in range(4):
@@ -15,6 +15,7 @@ def compare(ans, guslist):
                 count_of_b += 1
     return count_of_a, count_of_b
 
+<<<<<<< HEAD
 guslist=[]
 player_give_ab=""
 # 資料庫(一行就能解決的事我寫了10行)
@@ -101,3 +102,11 @@ if player_give_a == 4:
     print("haha I win loser")
 if count_of_a == 4:
     print("it must be a mistake that i lost")
+=======
+
+while count_of_a < 4:
+    gus = input("insert:")
+    guslist = [int(x) for x in gus]
+    count_of_a, count_of_b = compare(ans, guslist)
+    print(count_of_a, "A", count_of_b, "B")
+>>>>>>> parent of 2f6cfc4... the computer can play 1A2B with you, and this is the 1st version

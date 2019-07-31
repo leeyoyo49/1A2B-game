@@ -1,9 +1,4 @@
-import itertools
-print(len(list(itertools.permutations(range(10), 4))))
+dictionary = {'test':{1,3}, 'test2':{2}, 'test3':{2,3}}
 
-a = [0,1,2,3,4,5]
-
-for ix, x in enumerate(a):
-  print(ix, x, a)
-  if x % 2 == 0:
-    a.remove(x)
+if 'test' in dictionary:
+   print(list(dictionary).index('test'))
