@@ -15,7 +15,8 @@ def compare(ans, guslist):
                 count_of_b += 1
     return count_of_a, count_of_b
 
-
+guslist=[]
+player_give_ab=""
 # 資料庫(一行就能解決的事我寫了10行)
 allthenumlist = []
 for y in range(123, 9877):
@@ -28,7 +29,7 @@ for y in range(123, 9877):
 player_give_a = player_give_b = 0
 the_history_box = {}
 # 遊戲開始
-while count_of_a < 4 or player_give_a < 4:
+while count_of_a < 4 and player_give_a < 4:
     a = 0
     gus = input("insert your guess:")
     #處理輸入錯誤
@@ -56,12 +57,16 @@ while count_of_a < 4 or player_give_a < 4:
     com_gus = random.choice(allthenumlist)
     com_gus_str = map(str, com_gus)
     print("I guess your number is ", com_gus)
-    player_give_ab = input("show me the result(?a?b):")
     while a < 2:
         try:
+            player_give_ab = input("show me the result(?a?b):")
             player_give_a = int(player_give_ab[0])
             player_give_b = int(player_give_ab[2])
-            a = 2
+            if len(player_give_ab)>4:
+                a=1
+            else:
+                print("show me the right answer!!")
+                a = 2
         except:
             print('you insert the wrong thing ,insert it again')
             player_give_ab = input("show me the result(?a?b):")
@@ -90,8 +95,6 @@ while count_of_a < 4 or player_give_a < 4:
     #顯示出有神馬可能性
     print(the_history_box, "there are", len(notallthenumlist),
           "possibilities"+'\n'+"==================================================")
-    if player_give_a == 4:
-        break
 
 # 獲勝條件
 if player_give_a == 4:
