@@ -19,4 +19,11 @@
    * dict[apple] in dicthing.values() 看apple的value有沒有在dicthings的value裡面  
 ***
 某個在github上面的人寫的==>[markdown cheatsheat中文](https://gist.github.com/billy3321/1001749662c370887c63bb30f26c9e6e)  
-![alt 文字](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg "純粹python標誌")
+![alt 文字](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg "純粹python標誌")  
+***
+## How to commit and push  
+1. change folder ==> cd C:\\folder name  
+2. add them in ==> git add --all  
+3. check if it success ==> git status  
+4. commit them ==> git commit -m "the stuff you want to write"  
+5. pushh!! ==> git push -u origin master  
