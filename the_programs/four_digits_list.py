@@ -1,7 +1,6 @@
 import random
 d = dict.fromkeys(range(10))
 ans = random.sample(list(d), 4)
-print(d)
 count_of_a = count_of_b = 0
 
 
@@ -14,7 +13,7 @@ def compare(ans, guslist):
             else:
                 count_of_b += 1
     return count_of_a, count_of_b
-
+print('===================================')
 
 guslist = []
 player_give_ab = ""
@@ -32,7 +31,7 @@ the_history_box = {}
 # 遊戲開始
 while count_of_a < 4 and player_give_a < 4:
     a = 0
-    gus = input("insert your guess:")
+    gus = input("insert your guess(four numbers):")
     # 處理輸入錯誤
     while a < 2:
         try:
@@ -63,10 +62,10 @@ while count_of_a < 4 and player_give_a < 4:
             player_give_ab = input("show me the result(?a?b):")
             player_give_a = int(player_give_ab[0])
             player_give_b = int(player_give_ab[2])
-            if len(player_give_ab) > 4:
+            if len(player_give_ab) < 4:
                 a = 1
-            else:
                 print("show me the right answer!!")
+            else:    
                 a = 2
         except:
             print('you insert the wrong thing ,insert it again')

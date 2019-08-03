@@ -11,6 +11,7 @@ def Fibonacci_sequence(n):
 
 
 st = time.time()
-print(Fibonacci_sequence(40))
+num = input("insert your number:")
+print("the",num,"number of Fibonacci_sequence is ",Fibonacci_sequence(int(num)))
 et = time.time()
-print(et-st)
+print('it took',et-st,'second for the algorythm to solve out')
