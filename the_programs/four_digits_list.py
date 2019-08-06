@@ -89,3 +89,4 @@ while a < 5:
         game.the_whole_history_box()
         a = game.repeat()
         print('===================================')
+    print("another new round!!!!")
