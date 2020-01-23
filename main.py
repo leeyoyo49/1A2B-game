@@ -4,7 +4,7 @@ userinput = input("""which system do you want to use?
 3.mulltiplication table
 insert your choice:""")
 if int(userinput)== 1:
-    from the_programs import four_digits_list
+    from the_programs import four_digits_finished
 if int(userinput)== 2:
     from the_programs import Fibonacci_sequence
 if int(userinput)== 3:
